@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-2.0.xsd ">
+
+	<!-- admin action start -->
+<!-- 	<bean id="adminAction" class="com.tkb.robotactivity.action.admin.IndexAction" scope="prototype"/> -->	
+	<bean id="adminUserAccountAction" class="com.tkb.elearning.action.admin.UserAccountAction" scope="prototype">
+		<property name="userAccountService"><ref bean="userAccountService" /></property>
+		<property name="userLoginLogService"><ref bean="userLoginLogService" /></property>
+	</bean>
+	<bean id="adminBannerAction" class="com.tkb.elearning.action.admin.BannerAction" scope="prototype">
+		<property name="bannerService"><ref bean="bannerService" /></property>
+	</bean>		
+	<bean id="adminNewsAction" class="com.tkb.elearning.action.admin.NewsAction" scope="prototype">
+		<property name="newsService"><ref bean="newsService" /></property>
+	</bean>
+	<bean id="adminAssociationMemberAction" class="com.tkb.elearning.action.admin.AssociationMemberAction" scope="prototype">
+		<property name="associationMemberService"><ref bean="associationMemberService" /></property>
+	</bean>
+	<bean id="adminAboutLawAction" class="com.tkb.elearning.action.admin.AboutLawAction" scope="prototype">
+		<property name="aboutLawService"><ref bean="aboutLawService" /></property>
+	</bean>
+	<bean id="adminZoneAction" class="com.tkb.elearning.action.admin.ZoneAction" scope="prototype">
+		<property name="zoneService"><ref bean="zoneService" /></property>
+		<property name="allAssociationService"><ref bean="allAssociationService" /></property>
+	</bean>
+	<bean id="adminAllAssociationAction" class="com.tkb.elearning.action.admin.AllAssociationAction" scope="prototype">
+		<property name="allAssociationService"><ref bean="allAssociationService" /></property>
+				<property name="zoneService"><ref bean="zoneService" /></property>
+	</bean>	
+	<bean id="adminPeriodAction" class="com.tkb.elearning.action.admin.PeriodAction" scope="prototype">
+		<property name="periodService"><ref bean="periodService" /></property>
+	</bean>
+	<bean id="adminMeetingMinutesAction" class="com.tkb.elearning.action.admin.MeetingMinutesAction" scope="prototype">
+		<property name="meetingMinutesService"><ref bean="meetingMinutesService" /></property>
+	</bean>			
+	<bean id="adminCramMemberAction" class="com.tkb.elearning.action.admin.CramMemberAction" scope="prototype">
+		<property name="cramMemberService"><ref bean="cramMemberService" /></property>
+	</bean>
+	<bean id="adminConsumerZoneAction" class="com.tkb.elearning.action.admin.ConsumerZoneAction" scope="prototype">
+		<property name="consumerZoneService"><ref bean="consumerZoneService" /></property>
+	</bean>
+	<bean id="adminCramCaseAction" class="com.tkb.elearning.action.admin.CramCaseAction" scope="prototype">
+		<property name="cramCaseService"><ref bean="cramCaseService" /></property>
+	</bean>
+	<bean id="adminAboutWeAction" class="com.tkb.elearning.action.admin.AboutWeAction" scope="prototype">
+		<property name="aboutWeService"><ref bean="aboutWeService" /></property>
+	</bean>
+	<bean id="adminJoinNoticeAction" class="com.tkb.elearning.action.admin.JoinNoticeAction" scope="prototype">
+		<property name="joinNoticeService"><ref bean="joinNoticeService" /></property>
+	</bean>
+	<bean id="adminActiveAction" class="com.tkb.elearning.action.admin.ActiveAction" scope="prototype">
+		<property name="activeService"><ref bean="activeService" /></property>
+		<property name="periodService"><ref bean="periodService" /></property>
+	</bean>	
+	<bean id="adminJoinQuitAction" class="com.tkb.elearning.action.admin.JoinQuitAction" scope="prototype">
+		<property name="joinQuitService"><ref bean="joinQuitService" /></property>
+		<property name="consumerZoneService"><ref bean="consumerZoneService" /></property>
+	</bean>
+	<bean id="adminAppealAction" class="com.tkb.elearning.action.admin.AppealAction" scope="prototype">
+		<property name="appealService"><ref bean="appealService" /></property>
+	</bean>
+	<bean id="adminAppealMailAction" class="com.tkb.elearning.action.admin.AppealMailAction" scope="prototype">
+		<property name="appealMailService"><ref bean="appealMailService" /></property>
+	</bean>																																																																				
+	<bean id="adminEnsuredoAction" class="com.tkb.elearning.action.admin.EnsuredoAction" scope="prototype">
+		<property name="ensuredoService"><ref bean="ensuredoService" /></property>
+	</bean>
+	<bean id="adminEnsureRightAction" class="com.tkb.elearning.action.admin.EnsureRightAction" scope="prototype">
+		<property name="ensureRightService"><ref bean="ensureRightService" /></property>
+	</bean>	
+
+	<!-- admin end -->
+	
+	<!-- front action start -->
+<!-- 	<bean id="serviceAction" class="com.tkb.robotactivity.action.ServiceAction" scope="prototype"> -->
+<!-- 		<property name="keywordService"><ref bean="keywordService" /></property> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="indexAction" class="com.tkb.robotactivity.action.IndexAction" scope="prototype" parent="serviceAction"> -->
+<!-- 		<property name="registerDataService"><ref bean="registerDataService" /></property> -->
+<!-- 	</bean> -->
+	<bean id="indexAction" class="com.tkb.elearning.action.IndexAction" scope="prototype" parent="serviceAction">
+		<property name="bannerService"><ref bean="bannerService" /></property>
+		<property name="newsService"><ref bean="newsService" /></property>
+		<property name="consumerZoneService"><ref bean="consumerZoneService" /></property>
+		<property name="aboutLawService"><ref bean="aboutLawService" /></property>
+		<property name="meetingMinutesService"><ref bean="meetingMinutesService" /></property>
+		<property name="allAssociationService"><ref bean="allAssociationService" /></property>
+	</bean>
+	<bean id="serviceAction" class="com.tkb.elearning.action.ServiceAction" scope="prototype">
+		<property name="bannerService"><ref bean="bannerService" /></property>
+		<property name="newsService"><ref bean="newsService" /></property>
+		<property name="consumerZoneService"><ref bean="consumerZoneService" /></property>
+		<property name="aboutLawService"><ref bean="aboutLawService" /></property>
+		<property name="meetingMinutesService"><ref bean="meetingMinutesService" /></property>
+		<property name="allAssociationService"><ref bean="allAssociationService" /></property>
+	</bean>
+	<!-- front end -->
+</beans>

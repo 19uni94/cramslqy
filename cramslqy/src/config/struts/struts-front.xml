@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="front" namespace="/" extends="struts-default">		
+		<result-types>
+			<result-type name="tiles" default="true" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<interceptors>
+			<interceptor-stack name="defaultSecurityStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="tokenSession">
+					<param name="excludeMethods">*</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="defaultSecurityStack" />
+		
+		<global-results>
+			<result name="invalid.token" type="tiles">tiles.front.error</result>
+			<result name="error" type="tiles">tiles.front.error</result>
+		</global-results>
+<!-- 		<action name="service/*" class="serviceAction" method="{1}"> -->
+<!-- 			<result name="code" type="stream"> -->
+<!-- 				<param name="contentType">image/jpeg</param> -->
+<!-- 				<param name="inputName">imageStream</param> -->
+<!-- 				<param name="bufferSize">2048</param> -->
+<!-- 			</result> -->
+<!-- 		</action> -->
+<!-- 		<action name="index/*" class="indexAction" method="{1}"> -->
+<!-- 			<result name="index" type="redirect">/index/index.action</result> -->
+<!-- 			<result name="robots" type="tiles">tiles.front.robots</result> -->
+<!-- 			<result name="event" type="tiles">tiles.front.registerData.event</result> -->
+<!-- 			<result name="search" type="tiles">tiles.front.registerData.search</result> -->
+<!-- 			<result name="info" type="tiles">tiles.front.registerData.info</result> -->
+<!-- 			<result name="apply" type="tiles">tiles.front.registerData.apply</result> -->
+<!-- 			<result name="toSuccess" type="tiles">tiles.front.registerData.toSuccess</result> -->
+<!-- 			<result name="success" type="tiles">tiles.front.registerData.success</result> -->
+<!-- 		</action> -->
+		<action name="index/*" class="indexAction" method="{1}">
+			<result name="index" type="redirect">/index/index</result>
+			<result name="cramslqy" type="tiles">tiles.front.cramslqy</result>
+			<result name="banner" type="tiles">tiles.front.indexData.banner</result>
+			<result name="news" type="tiles">tiles.front.indexData.news</result>
+			<result name="newsView" type="tiles">tiles.front.indexData.newsView</result>
+			<result name="consumerZone" type="tiles">tiles.front.indexData.consumerZone</result>		
+			<result name="aboutLaw" type="tiles">tiles.front.indexData.aboutLaw</result>
+			<result name="aboutLawView" type="tiles">tiles.front.indexData.aboutLawView</result>
+			<result name="meetingMinutes" type="tiles">tiles.front.indexData.meetingMinutes</result>
+			<result name="meetingMinutesView" type="tiles">tiles.front.indexData.meetingMinutesView</result>
+			<result name="allAssociation" type="tiles">tiles.front.indexData.allAssociation</result>
+			<result name="allAssociationView" type="tiles">tiles.front.indexData.allAssociationView</result>		
+			<result name="search" type="tiles">tiles.front.indexData.search</result>
+			<result name="about" type="tiles">tiles.front.indexData.about</result>
+			<result name="cramCase" type="tiles">tiles.front.indexData.cramCase</result>
+			<result name="qyEnsure" type="tiles">tiles.front.indexData.qyEnsure</result>
+		</action>
+	</package>
+</struts>

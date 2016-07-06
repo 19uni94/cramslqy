@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd">    
+	<struts>
+		<constant name="struts.devMode" value="false"/>	
+<!-- 		<constant name="struts.action.extension" value=""/> -->
+		<constant name="struts.i18n.encoding" value="UTF-8"/>
+		<constant name="struts.enable.SlashesInActionNames" value="true"/>
+		<constant name="struts.multipart.maxSize" value="-1" />
+		<include file="config/struts/struts-admin.xml" />
+		<include file="config/struts/struts-front.xml" />
+	</struts>

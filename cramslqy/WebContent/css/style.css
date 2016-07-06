@@ -1,0 +1,109 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "微軟正黑體";
+  background: #eeede8;
+}
+
+.wrap {
+  position: relative;
+  width: 36vw;
+  height: 320px;
+  margin: 0 auto 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px #eee;
+  background: #fff;
+}
+
+.h1 {
+  margin-top: 120px;
+  text-align: center;
+  color: #4A148C;
+  letter-spacing: 2px;
+}
+
+.wrong-msg {
+  color: #ff0084;
+  text-align: left;
+}
+
+.h5 {
+  font-size: 15px;
+}
+
+.inputfield {
+  display: block;
+  margin-bottom: 15px;
+  width: 30vw;
+  height: 60px;
+  font-size: 32px;
+  border: none;
+  border-bottom: 2px solid #f2f3f3;
+  background: #fff;
+}
+.inputfield:focus {
+  border-color: #95d2ec;
+  outline: none;
+}
+.inputfield:focus::-webkit-input-placeholder {
+  color: #dfdfe7;
+}
+.inputfield:focus:placeholder-shown {
+  color: #dfdfe7;
+}
+.inputfield:focus:-ms-input-placeholder {
+  color: #dfdfe7;
+}
+.inputfield:focus::-moz-placeholder {
+  color: #dfdfe7;
+}
+.inputfield::-webkit-input-placeholder {
+  color: #a7a9b2;
+}
+.inputfield:placeholder-shown {
+  color: #a7a9b2;
+}
+.inputfield:-ms-input-placeholder {
+  color: #a7a9b2;
+}
+.inputfield::-moz-placeholder {
+  color: #a7a9b2;
+}
+
+.button {
+  display: inline-block;
+  height: 70px;
+  line-height: 70px;
+  width: 100%;
+  font-family: "ProximaNova";
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  text-align: center;
+  transform: scale(1, 1);
+  background: #F9A825;
+  box-sizing: border-box;
+  padding: 2px 6px 3px;
+  text-indent: 0px;
+  text-shadow: none;
+  font: 36px Arial;
+}
+.button:hover {
+  background: #FBC02D;
+}
+.button:focus {
+  outline: none;
+  background: #FBC02D;
+  transform: scale(0.95, 0.95);
+}

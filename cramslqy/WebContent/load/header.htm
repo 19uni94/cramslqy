@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+
+<script language="javascript">
+	/*上方menu自動呈現*/
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 200){
+            $('.header').addClass('autoHeader').animate({'opacity':'1'}, 400);
+        } else {
+            $('.header').removeClass('autoHeader');
+        }
+    });
+</script>
+
+<body>
+
+    	<div class="topArea">
+            <div class="logo">
+                <a href="index"><img src="../images/logo.png"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                	<li><a href="news">最新消息</a></li>
+                	<li><a href="consumerZone">消費者專區</a></li>
+                	<li><a href="aboutLaw">相關法規</a></li>
+                	<li><a href="meetingMinutes">會議記錄</a></li>
+                	<li><a href="javascript:;">Q&amp;A</a></li>
+                	<li><a href="allAssociation">各區協會資訊</a></li>
+                </ul>
+            </div><!-- End of nav -->
+            <div class="search">
+            	<input name="" type="text" placeholder="搜尋…">
+                <a href="index.htm"><img src="../images/search.png"></a>
+            </div>
+        </div><!-- End of topArea -->
+
+</body>
+</html>

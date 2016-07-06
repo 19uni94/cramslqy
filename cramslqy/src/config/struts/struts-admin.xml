@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="tkbrule" namespace="/tkbrule" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" default="true" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<global-results>
+			<result name="input" type="tiles">tiles.error</result>
+		</global-results>
+		<action name="user/*" class="adminUserAccountAction" method="{1}">
+			<result name="index" type="tiles">tiles.userAccount.index</result>
+<!-- 			<result name="applySetPassword" type="tiles">tiles.applySetPassword</result> -->
+<!-- 			<result name="setPassword" type="tiles">tiles.setPassword</result> -->
+			<result name="login" type="tiles">tiles.login</result>
+		</action>
+		<action name="banner/*" class="adminBannerAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/banner/index</result>
+			<result name="list" type="tiles">tiles.banner.list</result>
+			<result name="form" type="tiles">tiles.banner.form</result>
+			<result name="view" type="tiles">tiles.banner.view</result>
+		</action>						
+		<action name="news/*" class="adminNewsAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/news/index</result>
+			<result name="list" type="tiles">tiles.news.list</result>
+			<result name="form" type="tiles">tiles.news.form</result>
+			<result name="view" type="tiles">tiles.news.view</result>
+		</action>
+		<action name="associationMember/*" class="adminAssociationMemberAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/associationMember/index</result>
+			<result name="list" type="tiles">tiles.associationMember.list</result>
+			<result name="form" type="tiles">tiles.associationMember.form</result>
+			<result name="view" type="tiles">tiles.associationMember.view</result>
+		</action>
+		<action name="aboutLaw/*" class="adminAboutLawAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/aboutLaw/index</result>
+			<result name="list" type="tiles">tiles.aboutLaw.list</result>
+			<result name="form" type="tiles">tiles.aboutLaw.form</result>
+			<result name="view" type="tiles">tiles.aboutLaw.view</result>
+		</action>
+		<action name="zone/*" class="adminZoneAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/zone/index</result>
+			<result name="list" type="tiles">tiles.zone.list</result>
+			<result name="form" type="tiles">tiles.zone.form</result>
+			<result name="view" type="tiles">tiles.zone.view</result>
+		</action>
+		<action name="allAssociation/*" class="adminAllAssociationAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/allAssociation/index</result>
+			<result name="list" type="tiles">tiles.allAssociation.list</result>
+			<result name="form" type="tiles">tiles.allAssociation.form</result>
+			<result name="view" type="tiles">tiles.allAssociation.view</result>
+		</action>		
+		<action name="aboutWe/*" class="adminAboutWeAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/aboutWe/index</result>
+			<result name="list" type="tiles">tiles.aboutWe.list</result>
+			<result name="form" type="tiles">tiles.aboutWe.form</result>
+			<result name="view" type="tiles">tiles.aboutWe.view</result>
+		</action>
+		<action name="joinNotice/*" class="adminJoinNoticeAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/joinNotice/index</result>
+			<result name="list" type="tiles">tiles.joinNotice.list</result>
+			<result name="form" type="tiles">tiles.joinNotice.form</result>
+			<result name="view" type="tiles">tiles.joinNotice.view</result>
+		</action>
+		<action name="active/*" class="adminActiveAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/active/index</result>
+			<result name="list" type="tiles">tiles.active.list</result>
+			<result name="form" type="tiles">tiles.active.form</result>
+			<result name="view" type="tiles">tiles.active.view</result>
+		</action>
+		<action name="joinQuit/*" class="adminJoinQuitAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/joinQuit/index</result>
+			<result name="list" type="tiles">tiles.joinQuit.list</result>
+			<result name="view" type="tiles">tiles.joinQuit.view</result>
+		</action>	
+		<action name="appeal/*" class="adminAppealAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/appeal/index</result>
+			<result name="list" type="tiles">tiles.appeal.list</result>
+			<result name="form" type="tiles">tiles.appeal.form</result>
+			<result name="view" type="tiles">tiles.appeal.view</result>
+		</action>
+		<action name="appealMail/*" class="adminAppealMailAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/appealMail/index</result>
+			<result name="list" type="tiles">tiles.appealMail.list</result>
+			<result name="form" type="tiles">tiles.appealMail.form</result>
+			<result name="view" type="tiles">tiles.appealMail.view</result>
+		</action>																																							
+		<action name="period/*" class="adminPeriodAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/period/index</result>
+			<result name="list" type="tiles">tiles.period.list</result>
+			<result name="form" type="tiles">tiles.period.form</result>
+			<result name="view" type="tiles">tiles.period.view</result>
+		</action>
+		<action name="meetingMinutes/*" class="adminMeetingMinutesAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/meetingMinutes/index</result>
+			<result name="list" type="tiles">tiles.meetingMinutes.list</result>
+			<result name="form" type="tiles">tiles.meetingMinutes.form</result>
+			<result name="view" type="tiles">tiles.meetingMinutes.view</result>
+		</action>				
+		<action name="cramMember/*" class="adminCramMemberAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/cramMember/index</result>
+			<result name="list" type="tiles">tiles.cramMember.list</result>
+			<result name="form" type="tiles">tiles.cramMember.form</result>
+			<result name="view" type="tiles">tiles.cramMember.view</result>
+		</action>
+		<action name="consumerZone/*" class="adminConsumerZoneAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/consumerZone/index</result>
+			<result name="list" type="tiles">tiles.consumerZone.list</result>
+			<result name="form" type="tiles">tiles.consumerZone.form</result>
+			<result name="view" type="tiles">tiles.consumerZone.view</result>
+		</action>
+		<action name="cramCase/*" class="adminCramCaseAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/cramCase/index</result>
+			<result name="list" type="tiles">tiles.cramCase.list</result>
+			<result name="form" type="tiles">tiles.cramCase.form</result>
+			<result name="view" type="tiles">tiles.cramCase.view</result>
+		</action>
+		<action name="ensuredo/*" class="adminEnsuredoAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/ensuredo/index</result>
+			<result name="list" type="tiles">tiles.ensuredo.list</result>
+			<result name="form" type="tiles">tiles.ensuredo.form</result>
+			<result name="view" type="tiles">tiles.ensuredo.view</result>
+		</action>
+		<action name="ensureRight/*" class="adminEnsureRightAction" method="{1}">
+			<result name="index" type="redirect">/tkbrule/ensureRight/index</result>
+			<result name="list" type="tiles">tiles.ensureRight.list</result>
+			<result name="form" type="tiles">tiles.ensureRight.form</result>
+			<result name="view" type="tiles">tiles.ensureRight.view</result>
+		</action>					
+	</package>
+</struts>

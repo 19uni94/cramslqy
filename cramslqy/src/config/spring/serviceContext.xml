@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-2.0.xsd ">
+	
+	<!-- add by Ray 2013-03-08 talmaster service start -->
+<!-- 	<bean id="talkMasterService" class="com.tkb.robotactivity.service.impl.TalkMasterServiceImpl" scope="prototype"> -->
+<!-- 		<property name="talkMasterDao"><ref bean="talkMasterDao"/></property> -->
+<!-- 	</bean> -->
+	<!-- add by Ray 2013-03-08 talmaster service end -->
+	
+	<!-- add by ken 2014-01-28 admin service start -->
+	<bean id="userAccountService" class="com.tkb.elearning.service.impl.UserAccountServiceImpl" scope="prototype">
+		<property name="userAccountDao"><ref bean="userAccountDao"/></property>
+	</bean>
+	<bean id="userLoginLogService" class="com.tkb.elearning.service.impl.UserLoginLogServiceImpl" scope="prototype">
+		<property name="userLoginLogDao"><ref bean="userLoginLogDao"/></property>
+	</bean>
+	<bean id="bannerService" class="com.tkb.elearning.service.impl.BannerServiceImpl" scope="prototype">
+		<property name="bannerDao"><ref bean="bannerDao"/></property>
+	</bean>		
+	<bean id="newsService" class="com.tkb.elearning.service.impl.NewsServiceImpl" scope="prototype">
+		<property name="newsDao"><ref bean="newsDao"/></property>
+	</bean>
+	<bean id="associationMemberService" class="com.tkb.elearning.service.impl.AssociationMemberServiceImpl" scope="prototype">
+		<property name="associationMemberDao"><ref bean="associationMemberDao"/></property>
+	</bean>
+	<bean id="aboutLawService" class="com.tkb.elearning.service.impl.AboutLawServiceImpl" scope="prototype">
+		<property name="aboutLawDao"><ref bean="aboutLawDao"/></property>
+	</bean>
+	<bean id="zoneService" class="com.tkb.elearning.service.impl.ZoneServiceImpl" scope="prototype">
+		<property name="zoneDao"><ref bean="zoneDao"/></property>
+	</bean>
+	<bean id="allAssociationService" class="com.tkb.elearning.service.impl.AllAssociationServiceImpl" scope="prototype">
+		<property name="allAssociationDao"><ref bean="allAssociationDao"/></property>
+	</bean>	
+	<bean id="aboutWeService" class="com.tkb.elearning.service.impl.AboutWeServiceImpl" scope="prototype">
+		<property name="aboutWeDao"><ref bean="aboutWeDao"/></property>
+	</bean>
+	<bean id="joinNoticeService" class="com.tkb.elearning.service.impl.JoinNoticeServiceImpl" scope="prototype">
+		<property name="joinNoticeDao"><ref bean="joinNoticeDao"/></property>
+	</bean>
+	<bean id="joinQuitService" class="com.tkb.elearning.service.impl.JoinQuitServiceImpl" scope="prototype">
+		<property name="joinQuitDao"><ref bean="joinQuitDao"/></property>
+	</bean>	
+	<bean id="appealService" class="com.tkb.elearning.service.impl.AppealServiceImpl" scope="prototype">
+		<property name="appealDao"><ref bean="appealDao"/></property>
+	</bean>
+	<bean id="appealMailService" class="com.tkb.elearning.service.impl.AppealMailServiceImpl" scope="prototype">
+		<property name="appealMailDao"><ref bean="appealMailDao"/></property>
+	</bean>				
+	<bean id="activeService" class="com.tkb.elearning.service.impl.ActiveServiceImpl" scope="prototype">
+		<property name="activeDao"><ref bean="activeDao"/></property>
+	</bean>										
+	<bean id="periodService" class="com.tkb.elearning.service.impl.PeriodServiceImpl" scope="prototype">
+		<property name="periodDao"><ref bean="periodDao"/></property>
+	</bean>
+	<bean id="meetingMinutesService" class="com.tkb.elearning.service.impl.MeetingMinutesServiceImpl" scope="prototype">
+		<property name="meetingMinutesDao"><ref bean="meetingMinutesDao"/></property>
+	</bean>			
+	<bean id="cramMemberService" class="com.tkb.elearning.service.impl.CramMemberServiceImpl" scope="prototype">
+		<property name="cramMemberDao"><ref bean="cramMemberDao"/></property>
+	</bean>
+	<bean id="consumerZoneService" class="com.tkb.elearning.service.impl.ConsumerZoneServiceImpl" scope="prototype">
+		<property name="consumerZoneDao"><ref bean="consumerZoneDao"/></property>
+	</bean>
+	<bean id="cramCaseService" class="com.tkb.elearning.service.impl.CramCaseServiceImpl" scope="prototype">
+		<property name="cramCaseDao"><ref bean="cramCaseDao"/></property>
+	</bean>
+	<bean id="ensuredoService" class="com.tkb.elearning.service.impl.EnsuredoServiceImpl" scope="prototype">
+		<property name="ensuredoDao"><ref bean="ensuredoDao"/></property>
+	</bean>	
+	<bean id="ensureRightService" class="com.tkb.elearning.service.impl.EnsureRightServiceImpl" scope="prototype">
+		<property name="ensureRightDao"><ref bean="ensureRightDao"/></property>
+	</bean>		
+<!-- 	<bean id="registerDataService" class="com.tkb.robotactivity.service.impl.RegisterDataServiceImpl" scope="prototype"> -->
+<!-- 		<property name="registerDataDao"><ref bean="registerDataDao"/></property> -->
+<!-- 	</bean> -->
+	<!-- admin service end -->
+</beans>

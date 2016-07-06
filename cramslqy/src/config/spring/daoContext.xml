@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-2.0.xsd ">
+
+	<!-- add by Ray 2013-03-08 talmaster dao start -->
+<!-- 	<bean id="talkMasterRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true"> -->
+<!-- 		<constructor-arg> -->
+<!-- 			<value>com.tkb.robotactivity.model.TalkMaster</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="talkMasterDao" class="com.tkb.robotactivity.dao.impl.TalkMasterImpl" lazy-init="true"> -->
+<!-- 		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property> -->
+<!-- 		<property name="rowMapper"><ref bean="talkMasterRowMapper"/></property> -->
+<!-- 		<property name="pagingQuery"><ref bean="pagingQuery"/></property> -->
+<!-- 	</bean> -->
+	<!-- add by Ray 2013-03-08 talmaster dao end -->
+	
+	<!-- add by ken 2014-01-28 admin model start -->
+<!-- 	<bean id="UserproFileRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true"> -->
+<!-- 		<constructor-arg> -->
+<!-- 			<value>com.tkb.robotactivity.model.UserproFile</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean> -->	
+	<bean id="UserAccountRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.UserAccount</value>
+		</constructor-arg>
+	</bean>
+	<bean id="UserLoginLogRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.UserLoginLog</value>
+		</constructor-arg>
+	</bean>
+	<bean id="BannerRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.Banner</value>
+		</constructor-arg>
+	</bean>		
+	<bean id="NewsRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.News</value>
+		</constructor-arg>
+	</bean>
+	<bean id="AssociationMemberRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.AssociationMember</value>
+		</constructor-arg>
+	</bean>
+	<bean id="AboutLawRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.AboutLaw</value>
+		</constructor-arg>
+	</bean>
+	<bean id="ZoneRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.Zone</value>
+		</constructor-arg>
+	</bean>
+	<bean id="AllAssociationRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.AllAssociation</value>
+		</constructor-arg>
+	</bean>	
+	<bean id="AboutWeRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.AboutWe</value>
+		</constructor-arg>
+	</bean>
+	<bean id="JoinNoticeRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.JoinNotice</value>
+		</constructor-arg>
+	</bean>
+	<bean id="JoinQuitRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.ConsumerZone</value>
+		</constructor-arg>
+	</bean>	
+	<bean id="AppealRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.Appeal</value>
+		</constructor-arg>
+	</bean>	
+	<bean id="AppealMailRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.AppealMail</value>
+		</constructor-arg>
+	</bean>			
+	<bean id="ActiveRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.Active</value>
+		</constructor-arg>
+	</bean>																				
+	<bean id="PeriodRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.Period</value>
+		</constructor-arg>
+	</bean>
+	<bean id="MeetingMinutesRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.MeetingMinutes</value>
+		</constructor-arg>
+	</bean>			
+	<bean id="CramMemberRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.CramMember</value>
+		</constructor-arg>
+	</bean>
+	<bean id="ConsumerZoneRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.ConsumerZone</value>
+		</constructor-arg>
+	</bean>
+	<bean id="CramCaseRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.CramCase</value>
+		</constructor-arg>
+	</bean>
+	<bean id="EnsuredoRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.Ensuredo</value>
+		</constructor-arg>
+	</bean>
+	<bean id="EnsureRightRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true">
+		<constructor-arg>
+			<value>com.tkb.elearning.model.EnsureRight</value>
+		</constructor-arg>
+	</bean>			
+<!-- 	<bean id="MenuMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true"> -->
+<!-- 		<constructor-arg> -->
+<!-- 			<value>com.tkb.robotactivity.model.Menu</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="KeywordRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true"> -->
+<!-- 		<constructor-arg> -->
+<!-- 			<value>com.tkb.robotactivity.model.Keyword</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="RegisterDataRowMapper" class="sso.ojdbc.dao.impl.ClassRowMapper" lazy-init="true"> -->
+<!-- 		<constructor-arg> -->
+<!-- 			<value>com.tkb.robotactivity.model.RegisterData</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean> -->
+	<!-- admin model end -->
+	
+	<!-- add by ken 2014-01-28 admin dao start -->
+	<bean id="userAccountDao" class="com.tkb.elearning.dao.impl.UserAccountDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="UserAccountRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="userLoginLogDao" class="com.tkb.elearning.dao.impl.UserLoginLogDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="UserLoginLogRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="bannerDao" class="com.tkb.elearning.dao.impl.BannerDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="BannerRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>	
+	<bean id="newsDao" class="com.tkb.elearning.dao.impl.NewsDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="NewsRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="associationMemberDao" class="com.tkb.elearning.dao.impl.AssociationMemberDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="AssociationMemberRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="aboutLawDao" class="com.tkb.elearning.dao.impl.AboutLawDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="AboutLawRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="zoneDao" class="com.tkb.elearning.dao.impl.ZoneDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="ZoneRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="allAssociationDao" class="com.tkb.elearning.dao.impl.AllAssociationDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="AllAssociationRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>	
+	<bean id="aboutWeDao" class="com.tkb.elearning.dao.impl.AboutWeDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="AboutWeRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="joinNoticeDao" class="com.tkb.elearning.dao.impl.JoinNoticeDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="JoinNoticeRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>	
+	<bean id="activeDao" class="com.tkb.elearning.dao.impl.ActiveDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="ActiveRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>	
+	<bean id="joinQuitDao" class="com.tkb.elearning.dao.impl.JoinQuitDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="ConsumerZoneRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>	
+	<bean id="appealDao" class="com.tkb.elearning.dao.impl.AppealDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="AppealRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="appealMailDao" class="com.tkb.elearning.dao.impl.AppealMailDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="AppealMailRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>																	
+	<bean id="periodDao" class="com.tkb.elearning.dao.impl.PeriodDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="PeriodRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="meetingMinutesDao" class="com.tkb.elearning.dao.impl.MeetingMinutesDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="MeetingMinutesRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>			
+	<bean id="cramMemberDao" class="com.tkb.elearning.dao.impl.CramMemberDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="CramMemberRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="consumerZoneDao" class="com.tkb.elearning.dao.impl.ConsumerZoneDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="ConsumerZoneRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="cramCaseDao" class="com.tkb.elearning.dao.impl.CramCaseDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="CramCaseRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="ensuredoDao" class="com.tkb.elearning.dao.impl.EnsuredoDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="EnsuredoRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>
+	<bean id="ensureRightDao" class="com.tkb.elearning.dao.impl.EnsureRightDaoImpl" lazy-init="true" scope="prototype">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property>
+		<property name="rowMapper"><ref bean="EnsureRightRowMapper"/></property>
+		<property name="pagingQuery"><ref bean="pagingQuery"/></property>
+	</bean>			
+<!-- 	<bean id="keywordDao" class="com.tkb.robotactivity.dao.impl.KeywordDaoImpl" lazy-init="true" scope="prototype"> -->
+<!-- 		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property> -->
+<!-- 		<property name="rowMapper"><ref bean="KeywordRowMapper"/></property> -->
+<!-- 		<property name="pagingQuery"><ref bean="pagingQuery"/></property> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="registerDataDao" class="com.tkb.robotactivity.dao.impl.RegisterDataDaoImpl" lazy-init="true" scope="prototype"> -->
+<!-- 		<property name="jdbcTemplate"><ref bean="jdbcTemplate"/></property> -->
+<!-- 		<property name="rowMapper"><ref bean="RegisterDataRowMapper"/></property> -->
+<!-- 		<property name="pagingQuery"><ref bean="pagingQuery"/></property> -->
+<!-- 	</bean> -->
+	<!-- admin dao end -->
+</beans>
