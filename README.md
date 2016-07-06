@@ -12,3 +12,5 @@
 <a href="http://ppt.cc/lZ9bV">banner</a>
 <p>news 展示圖</p>
 <a href ="http://ppt.cc/VtrTn">news</a>
+<p>地區 展示圖</p>
+<a href = "http://ppt.cc/n4NHD">zone</a>
