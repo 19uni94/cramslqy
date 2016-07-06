@@ -10,4 +10,5 @@
 <p></p>
 <p>banner 後台展示圖</p>
 <a href="http://ppt.cc/lZ9bV">banner</a>
-
+<p>news 展示圖</p>
+<a href ="http://ppt.cc/VtrTn">news</a>
