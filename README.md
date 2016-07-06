@@ -9,4 +9,5 @@
 <p>在製作時有專案範例可以參考，遇到最大困難是前端部分，html+css自己是可以的，但在javascript、jquery、ajax接觸不多，所以做的進度會比較慢。</p>
 <p></p>
 <p></p>
+<a href="http://ppt.cc/lZ9bV"/>
 
