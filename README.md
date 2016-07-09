@@ -9,8 +9,8 @@
 <p>在製作時有專案範例可以參考，遇到最大困難是前端部分，html+css自己是可以的，但在javascript、jquery、ajax接觸不多，所以做的進度會比較慢。</p>
 <p></p>
 <p>banner 後台展示圖</p>
-<a href="http://ppt.cc/lZ9bV">banner</a>
+<a href="http://ppt.cc/lZ9bV" target="blank">banner</a>
 <p>news 展示圖</p>
 <a href ="http://ppt.cc/VtrTn">news</a>
 <p>地區 展示圖</p>
-<a href = "http://ppt.cc/n4NHD">zone</a>
+<a href = "http://ppt.cc/n4NHD">zone<img src="http://ppt.cc/n4NHD"/></a>
